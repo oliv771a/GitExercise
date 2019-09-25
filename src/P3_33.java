@@ -8,8 +8,6 @@ public class P3_33 {
         double price = 0, tip = 0;
         int satisfaction = 0;
 
-        // TODO We have to work on the rest of the project
-
         System.out.println("Please enter the total meal cost:");
         if (scanner.hasNextDouble()) price = scanner.nextDouble();
         else System.out.println("Please enter a valid number, in the form x.x");
