@@ -22,9 +22,6 @@ public class P3_34
         // TODO Need to make the if statements and the outputs
 
 
-        //test
-        int x = 3;
 
-        //comment bla
     }
 }
