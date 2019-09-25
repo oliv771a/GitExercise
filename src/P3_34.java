@@ -24,5 +24,7 @@ public class P3_34
 
         //test
         int x = 3;
+
+        //comment bla
     }
 }
