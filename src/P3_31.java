@@ -11,7 +11,7 @@ public class P3_31
     {
 
         // Declaration
-        Scanner in = new Scanner();
+        Scanner in = new Scanner(System.in);
 
         double wagePerHour = in.nextDouble();
         double hoursPerWeek = in.nextDouble();
