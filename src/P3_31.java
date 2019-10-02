@@ -17,5 +17,7 @@ public class P3_31
         double hoursPerWeek = in.nextDouble();
         double overtime = hoursPerWeek - 40 * 1.5;
 
+
+
     }
 }
