@@ -13,9 +13,51 @@ public class P3_31
         // Declaration
         Scanner in = new Scanner(System.in);
 
-        double wagePerHour = in.nextDouble();
-        double hoursPerWeek = in.nextDouble();
-        double overtime = hoursPerWeek - 40 * 1.5;
+        String employeeName = "";
+        double wagePerHour = 0;
+        double hoursPerWeek = 0;
+        double salary = 0;
 
+        //Input validation
+        System.out.println("Please enter in the employee name:");
+        employeeName = in.next();
+
+        System.out.println("Please enter in " + employeeName + "'s hourly wage in $:");
+        boolean confirmedInput = false;
+        while(!confirmedInput){
+            if(in.hasNextDouble()){
+                wagePerHour = in.nextDouble();
+
+                if(wagePerHour > 0) confirmedInput = true;
+                else System.out.println("Please enter in a valid salary larger than 0");
+            }else{
+                System.out.println("Please enter in a valid salary, example: 9.25");
+            }
+        }
+
+        System.out.println("How many hours did " + employeeName + " work in the past week?");
+        confirmedInput = false;
+        while(!confirmedInput){
+            if(in.hasNextDouble()){
+                hoursPerWeek = in.nextDouble();
+
+                if(hoursPerWeek > 0) confirmedInput = true;
+                else System.out.println("Please enter in a an amount of hours higher than 0");
+            }else{
+                System.out.println("Please enter in a amount of hours, example: 9.25");
+            }
+        }
+
+        //Computation
+        if(hoursPerWeek <= 40){
+            salary = hoursPerWeek * wagePerHour;
+        }else{
+            double overtime = hoursPerWeek - 40;
+            salary = (40 * wagePerHour) + (overtime * (wagePerHour * 1.5));
+        }
+
+        //Output
+        System.out.println(employeeName + " has worked a total of " + hoursPerWeek + " hours this week.");
+        System.out.println("Their hourly wage is $" + wagePerHour + " which results in salary of $" + salary);
     }
 }
