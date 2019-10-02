@@ -59,9 +59,6 @@ public class P3_31
         //Output
         System.out.println(employeeName + " has worked a total of " + hoursPerWeek + " hours this week.");
         System.out.println("Their hourly wage is $" + wagePerHour + " which results in salary of $" + salary);
-=======
 
-
->>>>>>> 01901ff677a2b2abaa27577b186568eea24795a2
     }
 }
