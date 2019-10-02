@@ -19,9 +19,11 @@ public class P3_31
         double salary = 0;
 
         //Input validation
+        //Getting the name of the employee
         System.out.println("Please enter in the employee name:");
         employeeName = in.next();
 
+        //Getting the employee's hourly wage. Making sure it's above zero & that it's a valid double
         System.out.println("Please enter in " + employeeName + "'s hourly wage in $:");
         boolean confirmedInput = false;
         while(!confirmedInput){
@@ -35,6 +37,7 @@ public class P3_31
             }
         }
 
+        //The same input validation used for the employee's hours worked
         System.out.println("How many hours did " + employeeName + " work in the past week?");
         confirmedInput = false;
         while(!confirmedInput){
@@ -48,7 +51,7 @@ public class P3_31
             }
         }
 
-        //Computation
+        //Computation, if they work under 40 hours it's easy; but for overtime work it requires additional computation
         if(hoursPerWeek <= 40){
             salary = hoursPerWeek * wagePerHour;
         }else{

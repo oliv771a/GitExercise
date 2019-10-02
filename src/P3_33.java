@@ -4,14 +4,17 @@ public class P3_33 {
 
     public static void main(String[] args) {
 
+        //Declaration
         Scanner scanner = new Scanner(System.in);
         double price = 0, tip = 0;
         int satisfaction = 0;
 
+        //Fetching the cost, making sure it's a valid double
         System.out.println("Please enter the total meal cost:");
         if (scanner.hasNextDouble()) price = scanner.nextDouble();
         else System.out.println("Please enter a valid number, in the form x.x");
 
+        //Fetching the satisfaction level, making sure it's within the boundaries and is actually an int
         System.out.println("How satisfied are you with the service?");
         System.out.println("From 1 to 3, 1 being satisfied while 3 is dissatisfied.");
 
@@ -23,6 +26,7 @@ public class P3_33 {
 
         }
 
+        //Handling the different satisfaction levels, applying the correct tip percentage
         switch(satisfaction) {
             case 1:
                 tip = price * 0.2;
@@ -35,6 +39,7 @@ public class P3_33 {
                 break;
         }
 
+        //Output
         System.out.println("The total tip to be given is $" + tip);
         System.out.println("The value was based on the satisfactory level " + satisfaction);
     }
